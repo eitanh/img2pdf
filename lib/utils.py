@@ -3,20 +3,29 @@ from PIL import Image
 import os
 import logging
 import yaml
+from os.path import exists
   
 def convert(filename):
     print("start")
     with open("config.yaml") as config:
-        confdata=yaml.load(config,Loader=yaml.FullLoader)
-        jpgPath=confdata['jpgPath']
-        pdfPath=confdata['pdfPath']
-        logging.info("Converting "+jpgPath+filename+" to "+pdfPath)
-        img_path = jpgPath+filename+".jpg"
-        pdf_path = pdfPath+filename+".pdf"
-        image = Image.open(img_path)
-        pdf_bytes = img2pdf.convert(image.filename)
-        file = open(pdf_path, "wb")
-        file.write(pdf_bytes)
-        image.close()
-        file.close()
-        return "Successfully made pdf file"
+        try:
+            filenameonly,file_extension=os.path.splitext(filename)
+            #logging.info("filename is "+filenameonly)
+            confdata=yaml.load(config,Loader=yaml.FullLoader)
+            jpgPath=confdata['jpgPath']
+            pdfPath=confdata['pdfPath']
+            logging.info("Converting "+jpgPath+filename+" to "+pdfPath)
+            img_path = jpgPath+filename
+            pdf_path = pdfPath+filenameonly+".pdf"
+            file_exists = exists(img_path)
+            if not file_exists:
+                return "1"
+            image = Image.open(img_path)
+            pdf_bytes = img2pdf.convert(image.filename)
+            file = open(pdf_path, "wb")
+            file.write(pdf_bytes)
+            image.close()
+            file.close()
+            return "0"
+        except:
+            return "1"

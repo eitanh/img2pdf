@@ -425,3 +425,53 @@ UnboundLocalError: local variable 'pdf_path' referenced before assignment
 2022-12-05 09:37:27,986 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 2022-12-05 09:37:29,033 - Converting c:\Users\eitan\projects\img2pdf\docker to c:\Users\eitan\projects\img2pdf\
 2022-12-05 09:37:29,097 - 127.0.0.1 - - [05/Dec/2022 09:37:29] "[37mGET /convert?filename=docker HTTP/1.1[0m" 200 -
+2022-12-05 09:39:50,594 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-05 09:39:55,976 - Converting c:\Users\eitan\projects\img2pdf\docker to c:\Users\eitan\projects\img2pdf\
+2022-12-05 09:39:56,001 - 127.0.0.1 - - [05/Dec/2022 09:39:56] "[37mGET /convert?filename=docker HTTP/1.1[0m" 200 -
+2022-12-05 09:45:26,838 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-05 09:45:30,090 - filename is docker
+2022-12-05 09:45:30,093 - Converting c:\Users\eitan\projects\img2pdf\docker to c:\Users\eitan\projects\img2pdf\
+2022-12-05 09:45:30,114 - 127.0.0.1 - - [05/Dec/2022 09:45:30] "[37mGET /convert?filename=docker HTTP/1.1[0m" 200 -
+2022-12-05 09:47:26,307 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-05 09:47:30,431 - Converting c:\Users\eitan\projects\img2pdf\docker to c:\Users\eitan\projects\img2pdf\
+2022-12-05 09:47:30,435 - Exception on /convert [GET]
+Traceback (most recent call last):
+  File "C:\Users\eitan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eitan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eitan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eitan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eitan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eitan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\eitan\projects\img2pdf\main.py", line 11, in hello_world
+    return convert(filename)
+  File "c:\Users\eitan\projects\img2pdf\lib\utils.py", line 18, in convert
+    image = Image.open(img_path)
+  File "C:\Users\eitan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\PIL\Image.py", line 3131, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'c:\\Users\\eitan\\projects\\img2pdf\\docker'
+2022-12-05 09:47:30,439 - 127.0.0.1 - - [05/Dec/2022 09:47:30] "[35m[1mGET /convert?filename=docker HTTP/1.1[0m" 500 -
+2022-12-05 09:50:00,095 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-05 09:50:02,871 - Converting c:\Users\eitan\projects\img2pdf\docker to c:\Users\eitan\projects\img2pdf\
+2022-12-05 09:50:02,877 - Exception on /convert [GET]
+Traceback (most recent call last):
+  File "C:\Users\eitan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eitan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eitan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eitan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+2022-12-05 09:50:02,877 - 127.0.0.1 - - [05/Dec/2022 09:50:02] "[35m[1mGET /convert?filename=docker HTTP/1.1[0m" 500 -
+2022-12-05 09:50:28,471 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-05 09:50:29,935 - Converting c:\Users\eitan\projects\img2pdf\docker to c:\Users\eitan\projects\img2pdf\
+2022-12-05 09:50:29,936 - 127.0.0.1 - - [05/Dec/2022 09:50:29] "[37mGET /convert?filename=docker HTTP/1.1[0m" 200 -
+2022-12-05 09:50:35,762 - Converting c:\Users\eitan\projects\img2pdf\docker.jpg to c:\Users\eitan\projects\img2pdf\
+2022-12-05 09:50:35,790 - 127.0.0.1 - - [05/Dec/2022 09:50:35] "[37mGET /convert?filename=docker.jpg HTTP/1.1[0m" 200 -
