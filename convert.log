@@ -475,3 +475,8 @@ TypeError: The view function did not return a valid response. The return type mu
 2022-12-05 09:50:29,936 - 127.0.0.1 - - [05/Dec/2022 09:50:29] "[37mGET /convert?filename=docker HTTP/1.1[0m" 200 -
 2022-12-05 09:50:35,762 - Converting c:\Users\eitan\projects\img2pdf\docker.jpg to c:\Users\eitan\projects\img2pdf\
 2022-12-05 09:50:35,790 - 127.0.0.1 - - [05/Dec/2022 09:50:35] "[37mGET /convert?filename=docker.jpg HTTP/1.1[0m" 200 -
+2022-12-05 09:51:51,021 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-05 09:51:56,787 - Converting c:\Users\eitan\projects\img2pdf\docker.jpg1 to c:\Users\eitan\projects\img2pdf\
+2022-12-05 09:51:56,787 - 127.0.0.1 - - [05/Dec/2022 09:51:56] "[37mGET /convert?filename=docker.jpg1 HTTP/1.1[0m" 200 -
+2022-12-05 09:51:58,990 - Converting c:\Users\eitan\projects\img2pdf\docker.jpg to c:\Users\eitan\projects\img2pdf\
+2022-12-05 09:51:59,018 - 127.0.0.1 - - [05/Dec/2022 09:51:59] "[37mGET /convert?filename=docker.jpg HTTP/1.1[0m" 200 -

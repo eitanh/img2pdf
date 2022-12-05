@@ -10,7 +10,6 @@ def convert(filename):
     with open("config.yaml") as config:
         try:
             filenameonly,file_extension=os.path.splitext(filename)
-            #logging.info("filename is "+filenameonly)
             confdata=yaml.load(config,Loader=yaml.FullLoader)
             jpgPath=confdata['jpgPath']
             pdfPath=confdata['pdfPath']
